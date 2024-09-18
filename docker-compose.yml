@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - '3306:3306'
+    volumes:
+      - './db:/var/lib/mysql'
+  adminer:
+    # NOTE: If you do not have DBeaver installed, you can use "Adminer" which runs alongside the MySQL database.
+    # Open your browser and go to http://localhost:8080 and you should be able to see the Adminer interface.
+    image: adminer:4.8.0
+    ports:
+      - 8080:8080
+    depends_on: ["db"]

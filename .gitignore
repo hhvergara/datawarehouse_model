@@ -1,0 +1,5 @@
+pipeline/Lib
+pipeline/Scripts
+pipeline/pyvenv.cfg
+**__pycache__**
+db
