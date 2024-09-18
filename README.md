@@ -55,4 +55,4 @@ Now, go to the homepage and you will see all the Farispley's databases created:
 
 ![alt text](docs/assets/image-8.png)
 
-Well done! now you can start to play with the databases.
+## Well done! now you can start to play with the databases.
